@@ -1,0 +1,16 @@
+Folder Size Guard Standalone 0.2.0 preview — static build audit
+Build date label: 2026-10-23
+Runtime on Windows: NOT VERIFIED
+Portable logic tests: 36 core + 8 quoting assertions passed
+
+x64/FolderSizeGuard.exe: ADVAPI32.dll, dbghelp.dll, GDI32.dll, KERNEL32.dll, msvcrt.dll, ole32.dll, SHELL32.dll, USER32.dll, WINHTTP.dll
+x64/FolderSizeGuardBridge.dll: KERNEL32.dll, msvcrt.dll, ole32.dll, OLEAUT32.dll, SHELL32.dll, SHLWAPI.dll
+x64/FolderSizeWorker.exe: KERNEL32.dll, msvcrt.dll
+x86/FolderSizeGuard.exe: ADVAPI32.dll, dbghelp.dll, GDI32.dll, KERNEL32.dll, msvcrt.dll, ole32.dll, SHELL32.dll, USER32.dll, WINHTTP.dll
+x86/FolderSizeGuardBridge.dll: KERNEL32.dll, msvcrt.dll, ole32.dll, OLEAUT32.dll, SHELL32.dll, SHLWAPI.dll
+x86/FolderSizeWorker.exe: KERNEL32.dll, msvcrt.dll
+
+Bridge exports verified: FsgStart, FsgDisable, FsgStatus (x86 and x64)
+All 6 PE images: ASLR + DEP enabled
+Worker imports: no CreateFile / delete / rename / attribute / ACL modification APIs
+No external C++ / Windhawk / .NET runtime DLL imports
